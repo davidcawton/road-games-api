@@ -1,0 +1,5 @@
+{
+  "name": "road-games-api",
+  "description": "A Restful API for menu items, order items, and orders.",
+  "addons": ["mongolab"]
+}
