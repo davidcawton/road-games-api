@@ -21,7 +21,6 @@ var fields = {
   description: { type: String },
   conference: { type: String },
   division: { type: String },
-  logo: { type: String },
   awayGames: [{ type: ObjectId, ref: 'Game' }],
   homeGames: [{ type: ObjectId, ref: 'Game' }],
 };

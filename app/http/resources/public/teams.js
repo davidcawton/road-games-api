@@ -2,6 +2,8 @@
 var express = require('express');
 var router = express.Router();
 var api = {};
+var mongoose = require('mongoose');
+var Game = mongoose.model('Game');
 
 // ALL
 api.teams = function(req) {
@@ -24,8 +26,23 @@ api.editTeam = function(req) {
 };
 
 // DELETE
-api.deleteTeam = function(req) {
-  return req.store.destroyRecord('Team', req.params.id);
+api.deleteTeam = function(req, res) {
+  return req.store.destroyRecord('Team', req.params.id, {
+    beforeDelete: function(id, save) {
+      Game.remove({
+        $or: [
+          {homeTeam: id},
+          {awayTeam: id},
+        ],
+      }).exec((err) => {
+        if (err) {
+          return res.status(500).send(err);
+        }
+
+        save();
+      });
+    },
+  });
 };
 
 router.get('/teams', api.teams);
