@@ -6,7 +6,7 @@ var api = {};
 // ALL
 api.activities = function(req) {
   return req.store.recordCollection('Activity', {
-    queryBy: ['category'],
+    queryBy: ['category', 'team'],
   });
 };
 
