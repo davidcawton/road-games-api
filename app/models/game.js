@@ -12,6 +12,7 @@ var fields = {
   winningTeam: { type: ObjectId, ref: 'Team' },
   homeScore: { type: String },
   awayScore: { type: String },
+  airport: { type: String },
 };
 
 var GameSchema = new Schema(fields);

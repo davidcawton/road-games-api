@@ -12,6 +12,7 @@ var GameTransformer = Mystique.Transformer.extend({
       winningTeam: game.winningTeam,
       homeScore: game.homeScore,
       awayScore: game.awayScore,
+      airport: game.airport,
     };
   },
 
@@ -23,6 +24,7 @@ var GameTransformer = Mystique.Transformer.extend({
       winningTeam: req.getJson('game.winningTeam'),
       homeScore: req.getJson('game.homeScore'),
       awayScore: req.getJson('game.awayScore'),
+      airport: req.getJson('game.airport'),
     };
   },
 });
