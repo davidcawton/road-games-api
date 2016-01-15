@@ -10,6 +10,7 @@ var ActivityTransformer = Mystique.Transformer.extend({
       linkUrl: activity.linkUrl,
       pictureUrl: activity.pictureUrl,
       category: activity.category,
+      airportCode: activity.airportCode,
       team: activity.team,
     };
   },
@@ -21,6 +22,7 @@ var ActivityTransformer = Mystique.Transformer.extend({
       linkUrl: req.getJson('activity.linkUrl'),
       pictureUrl: req.getJson('activity.pictureUrl'),
       category: req.getJson('activity.category'),
+      airportCode: req.getJson('activity.airportCode'),
       team: req.getJson('activity.team'),
     };
   },

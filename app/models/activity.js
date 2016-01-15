@@ -11,6 +11,7 @@ var fields = {
   linkUrl: { type: String },
   pictureUrl: { type: String },
   category: { type: String },
+  airportCode: { type: String },
   team: { type: ObjectId, ref: 'Team', childPath: 'activities' },
 };
 
