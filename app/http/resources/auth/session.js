@@ -36,7 +36,7 @@ router.all('/logout', function(req, res) {
   req.logOut();
   req.flash('success', 'You have logged out');
 
-  res.redirect('/login');
+  res.redirect('/index');
 });
 
 module.exports = router;
