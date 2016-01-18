@@ -7,6 +7,7 @@ var TeamTransformer = Mystique.Transformer.extend({
       id: team.id,
       name: team.name,
       city: team.city,
+      cityDescription: team.cityDescription,
       established: team.established,
       totalWins: team.totalWins,
       totalLosses: team.totalLosses,
@@ -29,6 +30,7 @@ var TeamTransformer = Mystique.Transformer.extend({
     return {
       name: req.getJson('team.name'),
       city: req.getJson('team.city'),
+      cityDescription: req.getJson('team.cityDescription'),
       established: req.getJson('team.established'),
       totalWins: req.getJson('team.totalWins'),
       totalLosses: req.getJson('team.totalLosses'),

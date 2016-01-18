@@ -8,6 +8,7 @@ var relationship = require('mongoose-relationship');
 var fields = {
   name: { type: String },
   city: { type: String },
+  cityDescription: { type: String },
   established: { type: Number },
   totalWins: { type: Number },
   totalLosses: { type: Number },
