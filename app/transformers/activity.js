@@ -6,6 +6,7 @@ var ActivityTransformer = Mystique.Transformer.extend({
     return {
       id: activity.id,
       name: activity.name,
+      activityName: activity.activityName,
       description: activity.description,
       linkUrl: activity.linkUrl,
       pictureUrl: activity.pictureUrl,
@@ -19,6 +20,7 @@ var ActivityTransformer = Mystique.Transformer.extend({
   mapIn(req) {
     return {
       name: req.getJson('activity.name'),
+      activityName: req.getJson('activity.activityName'),
       description: req.getJson('activity.description'),
       linkUrl: req.getJson('activity.linkUrl'),
       pictureUrl: req.getJson('activity.pictureUrl'),

@@ -7,6 +7,7 @@ var relationship = require('mongoose-relationship');
 
 var fields = {
   name: { type: String },
+  activityName: { type: String },
   description: { type: String },
   linkUrl: { type: String },
   pictureUrl: { type: String },
