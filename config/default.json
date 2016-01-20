@@ -15,6 +15,14 @@
       {
         "clientId": "development",
         "origin": "http://localhost:4200"
+      },
+      {
+        "clientId": "production",
+        "origin": "https://road-games.surge.sh"
+      },
+      {
+        "clientId": "production",
+        "origin": "http://road-games.surge.sh"
       }
     ]
   }
